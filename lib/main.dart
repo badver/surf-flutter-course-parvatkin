@@ -13,53 +13,55 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Roboto',
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyFirstStatefulWidget(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class MyFirstStatelessWidget extends StatelessWidget {
+  int buildsCount = 0;
 
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  MyFirstStatelessWidget() {
+    print('StateLess constructor call'); // вызывается постоянно
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+    buildsCount++;
+    print(buildsCount); // всегда выводит 1 потому что виджет пересоздается и переменная инициируется заново
+
+    return Container(
+      child: Center(
+        child: Text('Hello!'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+    );
+  }
+}
+
+class MyFirstStatefulWidget extends StatefulWidget {
+  MyFirstStatefulWidget() {
+    print('StateFull constructor call'); // вызывается постоянно
+  }
+
+  @override
+  _MyFirstStatefulWidgetState createState() => _MyFirstStatefulWidgetState();
+}
+
+class _MyFirstStatefulWidgetState extends State<MyFirstStatefulWidget> {
+  int buildsCount = 0;
+
+  _MyFirstStatefulWidgetState() {
+    print('State constructor call'); // вызывается 1 раз
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    buildsCount++;
+    print(buildsCount); // выводит номер перерисовки начиная с 1, потому что стейт не пересоздается
+
+    return Container(
+      child: Center(
+        child: Text('Hello!'),
       ),
     );
   }
