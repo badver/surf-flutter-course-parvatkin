@@ -1,0 +1,21 @@
+include: package:lint/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.config.dart"
+    - "build/**"
+
+  errors:
+    parameter_assignments: error
+    constant_identifier_names: ignore
+    missing_required_param: error
+    missing_return: error
+    must_be_immutable: error
+
+linter:
+  rules:
+    - avoid_returning_this
+    - prefer_single_quotes
+    - unawaited_futures
