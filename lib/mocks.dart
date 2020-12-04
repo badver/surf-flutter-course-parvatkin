@@ -7,7 +7,7 @@ final List<Sight> mocks = [
     lon: -110.835842,
     url: 'https://twistedsifter.com/wp-content/uploads/2014/02/airplane-boneyard-tucson-arizona-google-earth.jpg',
     details: 'Tucson, Arizona',
-    type: null,
+    type: 'landmark',
   ),
   const Sight(
     nameSight: 'Mysterious Desert Pattern',
@@ -15,7 +15,7 @@ final List<Sight> mocks = [
     lon: 33.631839,
     url: 'https://twistedsifter.com/wp-content/uploads/2014/02/crop-circle-egypt-google-earth-strange.jpg',
     details: 'Red Sea Governorate, Egypt',
-    type: null,
+    type: 'landmark',
   ),
   const Sight(
     nameSight: 'Giant Triangle',
@@ -23,6 +23,6 @@ final List<Sight> mocks = [
     lon: -112.633853,
     url: 'https://twistedsifter.com/wp-content/uploads/2014/02/giant-triangle-google-earth.jpg',
     details: 'Wittmann, Arizona, USA',
-    type: null,
+    type: 'landmark',
   ),
 ];
