@@ -2,6 +2,16 @@ import 'package:places/domain/sight.dart';
 
 final List<Sight> mocks = [
   const Sight(
+    nameSight: 'Пряности и радости',
+    lan: 32.149989,
+    lon: -110.835842,
+    url:
+        'https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    details:
+        'Пряный вкус радостной жизни вместе с шеф-поваром Изо Дзандзава, благодаря которой у гостей ресторана есть возможность выбирать из двух направлений: европейского и восточного',
+    type: 'ресторан',
+  ),
+  const Sight(
     nameSight: 'Airplane Boneyard',
     lan: 32.149989,
     lon: -110.835842,
