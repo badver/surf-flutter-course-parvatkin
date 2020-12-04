@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
+import 'package:places/ui/constants.dart';
 
 class SightCard extends StatelessWidget {
   final Sight sight;
@@ -71,7 +72,7 @@ class SightCard extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
-                  color: Color(0xFF3B3E5B),
+                  color: AppColors.black,
                 ),
               ),
             ),

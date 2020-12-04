@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/mocks.dart';
+import 'package:places/ui/constants.dart';
 import 'package:places/ui/screen/sight_card.dart';
 
 class SightListScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _SightListScreenState extends State<SightListScreen> {
         title: const Text(
           'Список\nинтересных мест',
           style: TextStyle(
-            color: Color(0xFF3B3E5B),
+            color: AppColors.black,
             fontSize: 32,
             fontWeight: FontWeight.bold,
           ),
