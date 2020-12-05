@@ -15,20 +15,11 @@ class _SightListScreenState extends State<SightListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: AppColors.appBarBackground,
         elevation: 0,
         toolbarHeight: 128,
         centerTitle: false,
-        title: const Text(
-          'Список\nинтересных мест',
-          style: TextStyle(
-            color: AppColors.black,
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-          ),
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-        ),
+        title: const AppBarTitle(),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -39,6 +30,22 @@ class _SightListScreenState extends State<SightListScreen> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class AppBarTitle extends StatelessWidget {
+  const AppBarTitle({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      AppTexts.appHeader,
+      style: AppTextStyles.appBarTitle,
+      maxLines: 2,
+      overflow: TextOverflow.ellipsis,
     );
   }
 }
