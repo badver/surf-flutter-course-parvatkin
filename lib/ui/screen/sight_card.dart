@@ -30,6 +30,7 @@ class SightCard extends StatelessWidget {
               imageUrl: sight.url,
               type: sight.type,
             ),
+            const SizedBox(height: 16),
             CardSightName(name: sight.nameSight),
             CardSightDetails(details: sight.details),
           ],
@@ -78,7 +79,7 @@ class CardSightName extends StatelessWidget {
       padding: const EdgeInsets.only(
         left: 16,
         right: 16,
-        top: 16,
+        top: 0,
         bottom: 2,
       ),
       child: Text(
