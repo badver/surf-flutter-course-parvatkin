@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
 import 'package:places/ui/constants.dart';
+import 'package:places/ui/widgets/work_time.dart';
 
 class SightDetails extends StatelessWidget {
   final Sight sight;
@@ -220,23 +221,6 @@ class DetailsHeader extends StatelessWidget {
           child: BackButton(),
         ),
       ],
-    );
-  }
-}
-
-class WorkTime extends StatelessWidget {
-  final String workTime;
-
-  const WorkTime({
-    Key key,
-    @required this.workTime,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      workTime,
-      style: AppTextStyles.workTime,
     );
   }
 }
