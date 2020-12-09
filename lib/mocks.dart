@@ -2,7 +2,7 @@ import 'package:places/domain/sight.dart';
 
 final List<Sight> mocks = [
   const Sight(
-    nameSight: 'Пряности и радости',
+    nameSight: 'Воронежский областной краеведческий',
     lan: 32.149989,
     lon: -110.835842,
     url:
@@ -10,6 +10,7 @@ final List<Sight> mocks = [
     details:
         'Пряный вкус радостной жизни вместе с шеф-поваром Изо Дзандзава, благодаря которой у гостей ресторана есть возможность выбирать из двух направлений: европейского и восточного',
     type: 'ресторан',
+    workTime: 'закрыто до 20:00',
   ),
   const Sight(
     nameSight: 'Airplane Boneyard',
@@ -18,6 +19,7 @@ final List<Sight> mocks = [
     url: 'https://twistedsifter.com/wp-content/uploads/2014/02/airplane-boneyard-tucson-arizona-google-earth.jpg',
     details: 'Tucson, Arizona',
     type: 'landmark',
+    workTime: 'закрыто до 10:00',
   ),
   const Sight(
     nameSight: 'Mysterious Desert Pattern',
@@ -26,6 +28,7 @@ final List<Sight> mocks = [
     url: 'https://twistedsifter.com/wp-content/uploads/2014/02/crop-circle-egypt-google-earth-strange.jpg',
     details: 'Red Sea Governorate, Egypt',
     type: 'landmark',
+    workTime: 'закрыто до 20:00',
   ),
   const Sight(
     nameSight: 'Giant Triangle',
@@ -34,5 +37,6 @@ final List<Sight> mocks = [
     url: 'https://twistedsifter.com/wp-content/uploads/2014/02/giant-triangle-google-earth.jpg',
     details: 'Wittmann, Arizona, USA',
     type: 'landmark',
+    workTime: 'c 10:00 до 20:00',
   ),
 ];
