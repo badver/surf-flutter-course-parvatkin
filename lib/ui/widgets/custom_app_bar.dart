@@ -9,6 +9,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }) : super(key: key);
 
   @override
+  Size get preferredSize => const Size.fromHeight(168);
+
+  @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: preferredSize.height,
@@ -24,7 +27,4 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
     );
   }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(168);
 }
