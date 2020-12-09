@@ -34,9 +34,12 @@ class SightCard extends StatelessWidget {
               ),
               const SizedBox(height: 18),
               CardSightName(name: sight.nameSight),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 2),
-                child: WorkTime(workTime: 'закрыто до 20:00'),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 2,
+                ),
+                child: WorkTime(workTime: sight.workTime),
               ),
               // CardSightDetails(details: sight.details),
             ],
@@ -86,17 +89,24 @@ class CardSightName extends StatelessWidget {
       padding: const EdgeInsets.only(
         left: 16,
         right: 16,
-        top: 0,
         bottom: 2,
       ),
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 151),
-        child: Text(
-          name,
-          textAlign: TextAlign.start,
-          maxLines: 3,
-          overflow: TextOverflow.ellipsis,
-          style: AppTextStyles.cardName,
+        child: Container(
+          padding: const EdgeInsets.only(
+            left: 3,
+            top: 2,
+            right: 9,
+          ),
+          color: AppColors.gray2,
+          child: Text(
+            name,
+            textAlign: TextAlign.start,
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
+            style: AppTextStyles.cardName,
+          ),
         ),
       ),
     );

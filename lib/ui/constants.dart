@@ -15,6 +15,7 @@ class AppColors {
   static const cardBackground = Color(0xFFF5F5F5);
   static const white = Colors.white;
   static const gray = Color(0xFF7C7E92);
+  static const gray2 = Color(0xFFC4C4C4);
   static const appBarBackground = Colors.transparent;
   static const disabled = Color(0xAA7C7E92);
 }
