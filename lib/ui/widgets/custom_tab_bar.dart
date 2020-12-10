@@ -8,7 +8,10 @@ class CustomTabBar extends PreferredSize {
 
   @override
   Widget get child => Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 6,
+        ),
         child: Container(
           decoration: AppDecorations.tabBarBackground,
           child: const TabBar(
