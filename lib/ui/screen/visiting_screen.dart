@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/mocks.dart';
 import 'package:places/ui/constants.dart';
+import 'package:places/ui/screen/app_bottom_navigation_bar.dart';
 import 'package:places/ui/screen/sight_card.dart';
 import 'package:places/ui/widgets/custom_tab_bar.dart';
 
@@ -30,6 +31,7 @@ class VisitingScreen extends StatelessWidget {
             ],
           ),
         ),
+        bottomNavigationBar: const AppBottomNavigationBar(selected: 1),
       ),
     );
   }
