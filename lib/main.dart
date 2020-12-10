@@ -15,7 +15,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Roboto',
       ),
-      home: SightListScreen(),
+      home: const SightListScreen(),
       // home: SightDetails(sight: mocks[0]),
     );
   }

@@ -50,8 +50,7 @@ class DetailsBody extends StatelessWidget {
             children: [
               SightType(sight: sight),
               const SizedBox(width: 16),
-              // TODO workTime пока заглушка, видимо в будущем будет браться откуда-то динамически
-              const WorkTime(workTime: 'закрыто до 09:00'),
+              WorkTime(workTime: sight.workTime),
             ],
           ),
           SightDetailsWidget(sight: sight),
