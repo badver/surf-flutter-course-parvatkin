@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// BottomNavigationBar
+/// [selected] - index of selected tab
 class AppBottomNavigationBar extends StatelessWidget {
   final int selected;
 

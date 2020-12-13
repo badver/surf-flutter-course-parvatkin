@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-/// Used with [TabBar.indicator] to draw a horizontal line below the
+/// Used with [TabBar.indicator] to draw a rounded square over the
 /// selected tab.
 ///
-/// The selected tab underline is inset from the tab's boundary by [insets].
+/// The selected tab indicator is inset from the tab's boundary by [insets].
 /// The [borderSide] defines the line's color and weight.
 ///
 /// The [TabBar.indicatorSize] property can be used to define the indicator's
@@ -23,10 +23,10 @@ class CustomTabIndicator extends Decoration {
   })  : assert(borderSide != null),
         assert(insets != null);
 
-  /// The color and weight of the horizontal line drawn below the selected tab.
+  /// The color and weight of the square drawn over the selected tab.
   final BorderSide borderSide;
 
-  /// Locates the selected tab's underline relative to the tab's boundary.
+  /// Locates the selected tab's square relative to the tab's boundary.
   ///
   /// The [TabBar.indicatorSize] property can be used to define the tab
   /// indicator's bounds in terms of its (centered) tab widget with

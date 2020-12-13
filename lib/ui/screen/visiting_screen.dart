@@ -5,6 +5,7 @@ import 'package:places/ui/screen/app_bottom_navigation_bar.dart';
 import 'package:places/ui/screen/sight_card.dart';
 import 'package:places/ui/widgets/custom_tab_bar.dart';
 
+/// VisitingScreen - screen with favorites and visited places
 class VisitingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -37,6 +38,7 @@ class VisitingScreen extends StatelessWidget {
   }
 }
 
+/// VisitedList - shows list of places to visit
 class VisitedList extends StatelessWidget {
   const VisitedList({
     Key key,
@@ -55,6 +57,7 @@ class VisitedList extends StatelessWidget {
   }
 }
 
+/// ToVisitList - shows list of visited places
 class ToVisitList extends StatelessWidget {
   const ToVisitList({
     Key key,

@@ -4,6 +4,9 @@ import 'package:places/ui/constants.dart';
 import 'package:places/ui/util/utils.dart';
 import 'package:places/ui/widgets/work_time.dart';
 
+/// SightDetails - screen with sight details
+///
+/// [sight] - sight data to display
 class SightDetails extends StatelessWidget {
   final Sight sight;
 
@@ -27,6 +30,9 @@ class SightDetails extends StatelessWidget {
   }
 }
 
+/// DetailsBody - shows sight details
+///
+/// [sight] - sight data to display
 class DetailsBody extends StatelessWidget {
   const DetailsBody({
     Key key,
@@ -70,6 +76,9 @@ class DetailsBody extends StatelessWidget {
   }
 }
 
+/// SightDetailsWidget - a widget to show a sight details
+///
+/// [sight] - sight data
 class SightDetailsWidget extends StatelessWidget {
   const SightDetailsWidget({
     Key key,
@@ -90,6 +99,9 @@ class SightDetailsWidget extends StatelessWidget {
   }
 }
 
+/// SightType - a widget to show a sight type
+///
+/// [sight] - sight data
 class SightType extends StatelessWidget {
   const SightType({
     Key key,
@@ -107,6 +119,9 @@ class SightType extends StatelessWidget {
   }
 }
 
+/// SightName - a widget to show a sight name
+///
+/// [sight] - sight data
 class SightName extends StatelessWidget {
   const SightName({
     Key key,
@@ -129,6 +144,7 @@ class SightName extends StatelessWidget {
   }
 }
 
+/// PlanButton - a button to plan/schedule a visit to a sight
 class PlanButton extends StatelessWidget {
   const PlanButton({
     Key key,
@@ -150,6 +166,7 @@ class PlanButton extends StatelessWidget {
   }
 }
 
+/// FavoritesButton - a button to add to favorites
 class FavoritesButton extends StatelessWidget {
   const FavoritesButton({
     Key key,
@@ -171,6 +188,7 @@ class FavoritesButton extends StatelessWidget {
   }
 }
 
+/// BuildRouteButton - a button to build a route to a sight
 class BuildRouteButton extends StatelessWidget {
   const BuildRouteButton({
     Key key,
@@ -198,6 +216,9 @@ class BuildRouteButton extends StatelessWidget {
   }
 }
 
+/// DetailsHeader - the header of sight details screen. Shows header.
+///
+/// [sight] - sight data
 class DetailsHeader extends StatelessWidget {
   const DetailsHeader({
     Key key,
@@ -226,6 +247,7 @@ class DetailsHeader extends StatelessWidget {
   }
 }
 
+/// BackButton - this is a back button to go back on tap if user want to go back from current screen.
 class BackButton extends StatelessWidget {
   const BackButton({
     Key key,

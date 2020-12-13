@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:places/ui/constants.dart';
 import 'package:places/ui/widgets/custom_tab_indicator.dart';
 
+/// Custom Tab bar - self describing name
 class CustomTabBar extends PreferredSize {
   @override
   Size get preferredSize => const Size.fromHeight(52);

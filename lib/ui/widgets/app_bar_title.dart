@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/ui/constants.dart';
 
+/// Appbar title
 class AppBarTitle extends StatelessWidget {
   const AppBarTitle({
     Key key,
