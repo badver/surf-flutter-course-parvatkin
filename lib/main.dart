@@ -5,6 +5,7 @@ void main() {
   runApp(App());
 }
 
+/// Main application widget
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,8 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Roboto',
       ),
-      home: const SightListScreen(),
+      home: SightListScreen(),
+      // home: VisitingScreen(),
       // home: SightDetails(sight: mocks[0]),
     );
   }

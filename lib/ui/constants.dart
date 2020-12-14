@@ -7,6 +7,9 @@ class AppTexts {
   static const buildRoute = 'ПОСТРОИТЬ МАРШРУТ';
   static const toPlan = 'Запланировать';
   static const toFavorites = 'В Избранное';
+  static const favorites = 'Избранное';
+  static const toVisit = 'Хочу посетить';
+  static const visited = 'Посетил';
 }
 
 class AppColors {
@@ -16,6 +19,9 @@ class AppColors {
   static const white = Colors.white;
   static const gray = Color(0xFF7C7E92);
   static const gray2 = Color(0xFFC4C4C4);
+  static const tabBackground = Color(0xFFF5F5F5);
+  static const tabUnselectedLabel = Color.fromRGBO(124, 126, 146, 0.56);
+
   static const appBarBackground = Colors.transparent;
   static const disabled = Color(0xAA7C7E92);
 }
@@ -27,10 +33,25 @@ class AppDecorations {
       Radius.circular(12),
     ),
   );
+
+  static const tabBarBackground = BoxDecoration(
+    color: AppColors.tabBackground,
+    borderRadius: BorderRadius.all(
+      Radius.circular(
+        40,
+      ),
+    ),
+  );
 }
 
 class AppTextStyles {
   static const cardType = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
+  );
+
+  static const tabLabel = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.bold,
     color: AppColors.white,
@@ -51,6 +72,12 @@ class AppTextStyles {
     color: AppColors.black,
     fontSize: 32,
     fontWeight: FontWeight.bold,
+  );
+
+  static const appBarTitleFavorites = TextStyle(
+    fontSize: 18,
+    color: AppColors.black,
+    fontWeight: FontWeight.w500,
   );
 
   static const sightDetailsName = TextStyle(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// App bar
+/// Shows [title] string with app specific styles
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget title;
 

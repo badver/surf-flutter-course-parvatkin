@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/ui/constants.dart';
 
+/// WorkTime shows [workTime] string
 class WorkTime extends StatelessWidget {
   final String workTime;
 

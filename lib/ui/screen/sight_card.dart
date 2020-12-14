@@ -4,6 +4,9 @@ import 'package:places/ui/constants.dart';
 import 'package:places/ui/util/utils.dart';
 import 'package:places/ui/widgets/work_time.dart';
 
+/// SightCard - a widget to show a sight card
+///
+/// [sight] - sight data to display
 class SightCard extends StatelessWidget {
   final Sight sight;
 
@@ -51,6 +54,9 @@ class SightCard extends StatelessWidget {
   }
 }
 
+/// CardSightDetails - a widget to show a sight details
+///
+/// [details] - details to display
 class CardSightDetails extends StatelessWidget {
   const CardSightDetails({
     Key key,
@@ -76,6 +82,9 @@ class CardSightDetails extends StatelessWidget {
   }
 }
 
+/// CardSightName - a widget to show a sight name
+///
+/// [name] - name to display
 class CardSightName extends StatelessWidget {
   const CardSightName({
     Key key,
@@ -114,6 +123,10 @@ class CardSightName extends StatelessWidget {
   }
 }
 
+/// CardSightHeader - a widget to show a sight card header
+///
+/// [imageUrl] - image url to display in header
+/// [type] - sight type
 class CardSightHeader extends StatelessWidget {
   const CardSightHeader({
     Key key,
