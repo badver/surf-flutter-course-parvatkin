@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:places/mocks.dart';
+import 'package:places/data/mocks.dart';
 import 'package:places/ui/screen/sight_card.dart';
 
 /// ToVisitList - shows list of visited places
