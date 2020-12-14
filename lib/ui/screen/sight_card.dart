@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
 import 'package:places/ui/constants.dart';
-import 'package:places/ui/screen/sight_card/card_sight_header.dart';
-import 'package:places/ui/screen/sight_card/card_sight_name.dart';
+import 'package:places/ui/screen/sight_card/sight_card_widgets.dart';
 import 'package:places/ui/widgets/work_time.dart';
 
 /// SightCard - a widget to show a sight card
