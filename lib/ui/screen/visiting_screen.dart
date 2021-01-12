@@ -13,12 +13,12 @@ class VisitingScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: 140,
-          backgroundColor: AppColors.appBarBackground,
+          backgroundColor: AppColorsLight.appBarBackground,
           elevation: 0,
           centerTitle: true,
-          title: const Text(
+          title: Text(
             AppTexts.favorites,
-            style: AppTextStyles.appBarTitleFavorites,
+            style: Theme.of(context).textTheme.subtitle1,
           ),
           bottom: CustomTabBar(),
         ),

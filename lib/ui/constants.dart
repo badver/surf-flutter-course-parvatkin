@@ -2,6 +2,40 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+class A {
+  static const transparent = Colors.transparent;
+
+  // Цвета для светлой темы
+  static const ltPrimaryColor = Color(0xff1A1A20);
+  static const ltAccentColor = Color(0xff4CAF50);
+  static const ltDisabledColor = Color(0x907C7E92);
+  static const ltBackgroundColor = Colors.white;
+  static const ltCardColor = Color(0xfff5f5f5);
+  static const ltBottomNavBackgroundColor = Colors.white;
+  static const ltBottomNavUnselectedColor = Colors.black;
+  static const ltBottomNavSelectedColor = Colors.black;
+
+  // Цвета для темной темы
+  static const dkPrimaryColor = Colors.white;
+  static const dkAccentColor = Color(0xff6ADA6F);
+  static const dkDisabledColor = Color(0x907C7E92);
+  static const dkBackgroundColor = Color(0xff21222C);
+  static const dkCardColor = Color(0xff1A1A20);
+  static const dkBottomNavBackgroundColor = Color(0xff21222C);
+  static const dkBottomNavUnselectedColor = Colors.white;
+  static const dkBottomNavSelectedColor = Colors.white;
+
+  static const black = Colors.black;
+  static const black54 = Colors.black54;
+  static const white = Colors.white;
+  static const grey = Colors.grey;
+  static const grayF5 = Color(0xfff5f5f5);
+  static const lightGray = Color(0xFF7C7E92);
+  static const grayBlue = Color(0xFF3B3E5B);
+  static const grayBlue2 = Color(0xFF252849);
+  static const green = Colors.green;
+}
+
 class AppTexts {
   static const appHeader = 'Список\nинтересных мест';
   static const buildRoute = 'ПОСТРОИТЬ МАРШРУТ';
@@ -12,108 +46,51 @@ class AppTexts {
   static const visited = 'Посетил';
 }
 
-class AppColors {
-  static const black = Color(0xFF3B3E5B);
+class AppColorsLight {
+  static const mainBlack = Color(0xFF252849);
+  static const secondaryBlack = Color(0xFF3B3E5B);
+  static const secondary2 = Color(0xFF7C7E92);
+  static const inactiveBlack = Color.fromRGBO(124, 126, 146, 0.56);
+  static const background = Color(0xFFF5F5F5);
+
   static const green = Color(0xFF4CAF50);
-  static const cardBackground = Color(0xFFF5F5F5);
+  static const yellow = Color(0xFFFCDD3D);
+  static const red = Color(0xFFEF4343);
   static const white = Colors.white;
-  static const gray = Color(0xFF7C7E92);
-  static const gray2 = Color(0xFFC4C4C4);
-  static const tabBackground = Color(0xFFF5F5F5);
-  static const tabUnselectedLabel = Color.fromRGBO(124, 126, 146, 0.56);
 
   static const appBarBackground = Colors.transparent;
-  static const disabled = Color(0xAA7C7E92);
+}
+
+class AppColorsDark {
+  static const dark = Color(0xFF1A1A20);
+  static const main = Color(0xFF21222C);
+  static const secondaryBlack = Color(0xFF3B3E5B);
+  static const secondary2Black = Color(0xFF7C7E92);
+  static const inactiveBlack = Color.fromRGBO(124, 126, 146, 0.56);
+  static const background = main;
+
+  static const green = Color(0xFF6ADA6F);
+  static const yellow = Color(0xFFFFE769);
+  static const red = Color(0xFFCF2A2A);
+  static const white = Colors.white;
+
+  static const appBarBackground = Colors.transparent;
 }
 
 class AppDecorations {
   static const cardDecoration = BoxDecoration(
-    color: AppColors.cardBackground,
+    color: AppColorsLight.background,
     borderRadius: BorderRadius.all(
       Radius.circular(12),
     ),
   );
 
   static const tabBarBackground = BoxDecoration(
-    color: AppColors.tabBackground,
+    color: AppColorsLight.background,
     borderRadius: BorderRadius.all(
       Radius.circular(
         40,
       ),
     ),
-  );
-}
-
-class AppTextStyles {
-  static const cardType = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.bold,
-    color: AppColors.white,
-  );
-
-  static const tabLabel = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.bold,
-    color: AppColors.white,
-  );
-
-  static const cardName = TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeight.w500,
-    color: AppColors.black,
-  );
-
-  static const cardDetails = TextStyle(
-    fontSize: 14,
-    color: AppColors.gray,
-  );
-
-  static const appBarTitle = TextStyle(
-    color: AppColors.black,
-    fontSize: 32,
-    fontWeight: FontWeight.bold,
-  );
-
-  static const appBarTitleFavorites = TextStyle(
-    fontSize: 18,
-    color: AppColors.black,
-    fontWeight: FontWeight.w500,
-  );
-
-  static const sightDetailsName = TextStyle(
-    fontSize: 24,
-    fontWeight: FontWeight.bold,
-    color: AppColors.black,
-  );
-
-  static const sightDetailsType = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.bold,
-    color: AppColors.black,
-  );
-
-  static const sightDetailsDetails = TextStyle(
-    fontSize: 14,
-    color: AppColors.black,
-  );
-
-  static const buildRouteButton = TextStyle(
-    color: AppColors.white,
-    fontSize: 14,
-  );
-
-  static const toPlan = TextStyle(
-    color: AppColors.disabled,
-    fontSize: 14,
-  );
-
-  static const toFavorites = TextStyle(
-    color: AppColors.black,
-    fontSize: 14,
-  );
-
-  static const workTime = TextStyle(
-    fontSize: 14,
-    color: AppColors.gray,
   );
 }

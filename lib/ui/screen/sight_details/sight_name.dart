@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/ui/constants.dart';
 
 /// SightName - a widget to show a sight name
 ///
@@ -21,7 +20,7 @@ class SightName extends StatelessWidget {
       ),
       child: Text(
         sight.nameSight,
-        style: AppTextStyles.sightDetailsName,
+        style: Theme.of(context).textTheme.headline2,
       ),
     );
   }

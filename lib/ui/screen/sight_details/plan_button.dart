@@ -13,11 +13,11 @@ class PlanButton extends StatelessWidget {
       onPressed: () {},
       icon: const Icon(
         Icons.calendar_today,
-        color: AppColors.disabled,
+        color: AppColorsLight.inactiveBlack,
       ),
-      label: const Text(
+      label: Text(
         AppTexts.toPlan,
-        style: AppTextStyles.toPlan,
+        style: Theme.of(context).textTheme.bodyText2,
       ),
     );
   }

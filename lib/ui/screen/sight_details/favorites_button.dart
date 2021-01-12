@@ -13,11 +13,11 @@ class FavoritesButton extends StatelessWidget {
       onPressed: () {},
       icon: const Icon(
         Icons.details,
-        color: AppColors.black,
+        color: AppColorsLight.secondaryBlack,
       ),
-      label: const Text(
+      label: Text(
         AppTexts.toFavorites,
-        style: AppTextStyles.toFavorites,
+        style: Theme.of(context).textTheme.bodyText2,
       ),
     );
   }

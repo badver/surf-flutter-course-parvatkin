@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/constants.dart';
 import 'package:places/ui/util/utils.dart';
 
 /// CardSightHeader - a widget to show a sight card header
@@ -37,7 +36,7 @@ class CardSightHeader extends StatelessWidget {
           left: 16,
           child: Text(
             type,
-            style: AppTextStyles.cardType,
+            style: Theme.of(context).textTheme.bodyText1,
           ),
         ),
         const Positioned(

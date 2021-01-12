@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:places/ui/widgets/theme_controller.dart';
+import 'package:provider/provider.dart';
 
 /// App bar
 /// Shows [title] string with app specific styles
@@ -19,11 +21,29 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       height: preferredSize.height,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Row(
           children: [
-            const SizedBox(height: 64),
-            title,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 64),
+                  title,
+                ],
+              ),
+            ),
+            // TODO move theme switch from app bar to settings
+            Switch(
+              onChanged: (value) {
+                final controller = context.read<ThemeController>();
+                if (value) {
+                  controller.toDark();
+                } else {
+                  controller.toLight();
+                }
+              },
+              value: context.watch<ThemeController>().isDark,
+            ),
           ],
         ),
       ),
