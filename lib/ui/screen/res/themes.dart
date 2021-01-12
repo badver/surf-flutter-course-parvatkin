@@ -49,6 +49,9 @@ final lightTheme = ThemeData(
   brightness: Brightness.light,
   fontFamily: 'Roboto',
   primaryColor: AppColorsLight.mainBlack,
+  secondaryHeaderColor: AppColorsLight.secondary2,
+  disabledColor: AppColorsLight.inactiveBlack,
+  buttonColor: AppColorsLight.white,
   backgroundColor: AppColorsLight.background,
   scaffoldBackgroundColor: AppColorsLight.white,
   textTheme: TextTheme(
@@ -79,13 +82,16 @@ final darkTheme = ThemeData(
   brightness: Brightness.dark,
   fontFamily: 'Roboto',
   primaryColor: AppColorsDark.white,
+  secondaryHeaderColor: AppColorsDark.secondary2Black,
+  disabledColor: AppColorsDark.inactiveBlack,
   backgroundColor: AppColorsDark.background,
+  buttonColor: AppColorsDark.main,
   scaffoldBackgroundColor: AppColorsDark.background,
   textTheme: TextTheme(
     // large title
     headline1: appTextTheme.headline1.copyWith(color: AppColorsDark.main),
     // title
-    headline2: appTextTheme.headline2.copyWith(color: AppColorsDark.main),
+    headline2: appTextTheme.headline2.copyWith(color: AppColorsDark.white),
     // subtitle
     subtitle1: appTextTheme.subtitle1.copyWith(color: AppColorsDark.main),
     // text

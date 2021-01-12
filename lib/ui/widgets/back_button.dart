@@ -14,7 +14,7 @@ class AppBackButton extends StatelessWidget {
       child: FlatButton(
         padding: const EdgeInsets.all(0),
         onPressed: () {},
-        color: Theme.of(context).primaryColor,
+        color: Theme.of(context).buttonColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),

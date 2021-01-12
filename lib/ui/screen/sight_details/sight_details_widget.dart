@@ -18,7 +18,9 @@ class SightDetailsWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 24),
       child: Text(
         sight.details,
-        style: Theme.of(context).textTheme.bodyText2,
+        style: Theme.of(context).textTheme.bodyText2.copyWith(
+              color: Theme.of(context).primaryColor,
+            ),
       ),
     );
   }

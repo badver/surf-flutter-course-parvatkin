@@ -17,7 +17,7 @@ class SightType extends StatelessWidget {
     return Text(
       sight.type,
       style: Theme.of(context).textTheme.bodyText1.copyWith(
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).secondaryHeaderColor,
           ),
     );
   }

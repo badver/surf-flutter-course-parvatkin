@@ -12,6 +12,8 @@ class WorkTime extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Text(
         workTime,
-        style: Theme.of(context).textTheme.bodyText2,
+        style: Theme.of(context).textTheme.bodyText2.copyWith(
+              color: Theme.of(context).disabledColor,
+            ),
       );
 }

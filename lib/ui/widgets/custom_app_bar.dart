@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/widgets/theme_controller.dart';
-import 'package:provider/provider.dart';
+import 'package:places/ui/widgets/theme_switch.dart';
 
 /// App bar
 /// Shows [title] string with app specific styles
@@ -33,17 +32,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             ),
             // TODO move theme switch from app bar to settings
-            Switch(
-              onChanged: (value) {
-                final controller = context.read<ThemeController>();
-                if (value) {
-                  controller.toDark();
-                } else {
-                  controller.toLight();
-                }
-              },
-              value: context.watch<ThemeController>().isDark,
-            ),
+            const ThemeSwitch(),
           ],
         ),
       ),

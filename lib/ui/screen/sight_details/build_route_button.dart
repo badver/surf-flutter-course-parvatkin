@@ -23,7 +23,9 @@ class BuildRouteButton extends StatelessWidget {
       ),
       label: Text(
         AppTexts.buildRoute,
-        style: Theme.of(context).textTheme.bodyText2,
+        style: Theme.of(context).textTheme.button.copyWith(
+              color: AppColorsLight.white,
+            ),
       ),
     );
   }
