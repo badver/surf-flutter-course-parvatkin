@@ -2,7 +2,7 @@ import 'package:places/domain/sight.dart';
 
 final List<Sight> mocks = [
   const Sight(
-    nameSight: 'Воронежский областной краеведческий',
+    nameSight: 'Воронежский областной краеведческий музей',
     lan: 32.149989,
     lon: -110.835842,
     url:
