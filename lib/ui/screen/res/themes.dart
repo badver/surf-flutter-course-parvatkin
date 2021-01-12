@@ -110,7 +110,7 @@ final darkTheme = ThemeData(
   ),
   textTheme: TextTheme(
     // large title
-    headline1: appTextTheme.headline1.copyWith(color: AppColorsDark.main),
+    headline1: appTextTheme.headline1.copyWith(color: AppColorsDark.white),
     // title
     headline2: appTextTheme.headline2.copyWith(color: AppColorsDark.white),
     // subtitle
