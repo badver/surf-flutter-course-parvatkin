@@ -13,7 +13,7 @@ class WorkTime extends StatelessWidget {
   Widget build(BuildContext context) => Text(
         workTime,
         style: Theme.of(context).textTheme.bodyText2.copyWith(
-              color: Theme.of(context).disabledColor,
+              color: Theme.of(context).secondaryHeaderColor,
             ),
       );
 }

@@ -39,10 +39,11 @@ class CardSightHeader extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyText1,
           ),
         ),
-        const Positioned(
+        Positioned(
           top: 16,
           right: 16,
           child: Placeholder(
+            color: Theme.of(context).textTheme.bodyText1.color,
             fallbackWidth: 20,
             fallbackHeight: 18,
           ),

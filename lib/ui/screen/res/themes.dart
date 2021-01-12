@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:places/ui/constants.dart';
+import 'package:places/ui/widgets/custom_tab_indicator.dart';
 
 /// all text style of the application
 const appTextTheme = TextTheme(
@@ -48,7 +49,17 @@ const appTextTheme = TextTheme(
 final lightTheme = ThemeData(
   brightness: Brightness.light,
   fontFamily: 'Roboto',
-  primaryColor: AppColorsLight.mainBlack,
+  primaryColor: AppColorsLight.main,
+  tabBarTheme: TabBarTheme(
+    indicator: const CustomTabIndicator(
+      borderSide: BorderSide(
+        color: AppColorsLight.secondary,
+      ),
+    ),
+    unselectedLabelColor: AppColorsLight.secondary2,
+    labelStyle: appTextTheme.bodyText1,
+    labelColor: AppColorsLight.white,
+  ),
   secondaryHeaderColor: AppColorsLight.secondary2,
   disabledColor: AppColorsLight.inactiveBlack,
   buttonColor: AppColorsLight.white,
@@ -56,24 +67,25 @@ final lightTheme = ThemeData(
   scaffoldBackgroundColor: AppColorsLight.white,
   textTheme: TextTheme(
     // large title
-    headline1: appTextTheme.headline1.copyWith(color: AppColorsLight.mainBlack),
+    headline1: appTextTheme.headline1.copyWith(color: AppColorsLight.main),
     // title
-    headline2: appTextTheme.headline2.copyWith(color: AppColorsLight.mainBlack),
+    headline2: appTextTheme.headline2.copyWith(color: AppColorsLight.main),
     // subtitle
-    subtitle1: appTextTheme.subtitle1.copyWith(color: AppColorsLight.mainBlack),
+    subtitle1: appTextTheme.subtitle1.copyWith(color: AppColorsLight.main),
     // text
-    subtitle2: appTextTheme.subtitle2.copyWith(color: AppColorsLight.secondaryBlack),
+    subtitle2: appTextTheme.subtitle2.copyWith(color: AppColorsLight.secondary),
     // small bold
     bodyText1: appTextTheme.bodyText1.copyWith(color: AppColorsLight.white),
     // small
     bodyText2: appTextTheme.bodyText2.copyWith(color: AppColorsLight.secondary2),
     // super small
-    overline: appTextTheme.overline.copyWith(color: AppColorsLight.mainBlack),
+    overline: appTextTheme.overline.copyWith(color: AppColorsLight.main),
     // button
-    button: appTextTheme.button.copyWith(color: AppColorsLight.mainBlack),
+    button: appTextTheme.button.copyWith(color: AppColorsLight.main),
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    unselectedItemColor: AppColorsLight.mainBlack,
+    unselectedItemColor: AppColorsLight.main,
+    backgroundColor: AppColorsLight.white,
   ),
 );
 
@@ -82,11 +94,20 @@ final darkTheme = ThemeData(
   brightness: Brightness.dark,
   fontFamily: 'Roboto',
   primaryColor: AppColorsDark.white,
-  secondaryHeaderColor: AppColorsDark.secondary2Black,
+  secondaryHeaderColor: AppColorsDark.secondary2,
   disabledColor: AppColorsDark.inactiveBlack,
   backgroundColor: AppColorsDark.background,
   buttonColor: AppColorsDark.main,
-  scaffoldBackgroundColor: AppColorsDark.background,
+  scaffoldBackgroundColor: AppColorsDark.main,
+  tabBarTheme: TabBarTheme(
+    indicator: const CustomTabIndicator(
+      borderSide: BorderSide(
+        color: AppColorsDark.white,
+      ),
+    ),
+    unselectedLabelColor: AppColorsDark.secondary2,
+    labelStyle: appTextTheme.bodyText1.copyWith(color: AppColorsDark.white),
+  ),
   textTheme: TextTheme(
     // large title
     headline1: appTextTheme.headline1.copyWith(color: AppColorsDark.main),
@@ -95,9 +116,9 @@ final darkTheme = ThemeData(
     // subtitle
     subtitle1: appTextTheme.subtitle1.copyWith(color: AppColorsDark.main),
     // text
-    subtitle2: appTextTheme.subtitle2.copyWith(color: AppColorsDark.main),
+    subtitle2: appTextTheme.subtitle2.copyWith(color: AppColorsDark.white),
     // small bold
-    bodyText1: appTextTheme.bodyText1.copyWith(color: AppColorsDark.main),
+    bodyText1: appTextTheme.bodyText1.copyWith(color: AppColorsDark.white),
     // small
     bodyText2: appTextTheme.bodyText2.copyWith(color: AppColorsDark.main),
     // super small
@@ -107,6 +128,7 @@ final darkTheme = ThemeData(
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     unselectedItemColor: AppColorsDark.white,
+    backgroundColor: AppColorsDark.main,
   ),
   cardColor: AppColorsDark.dark,
 );
