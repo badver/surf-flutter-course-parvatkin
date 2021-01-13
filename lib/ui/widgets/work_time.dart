@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/constants.dart';
 
 /// WorkTime shows [workTime] string
 class WorkTime extends StatelessWidget {
@@ -11,10 +10,10 @@ class WorkTime extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Text(
-      workTime,
-      style: AppTextStyles.workTime,
-    );
-  }
+  Widget build(BuildContext context) => Text(
+        workTime,
+        style: Theme.of(context).textTheme.bodyText2.copyWith(
+              color: Theme.of(context).secondaryHeaderColor,
+            ),
+      );
 }

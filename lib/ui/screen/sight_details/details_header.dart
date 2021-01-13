@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
 import 'package:places/ui/util/utils.dart';
+import 'package:places/ui/widgets/back_button.dart';
+import 'package:places/ui/widgets/theme_switch.dart';
 
 /// DetailsHeader - the header of sight details screen. Shows header.
 ///
@@ -26,7 +28,12 @@ class DetailsHeader extends StatelessWidget {
         const Positioned(
           top: 36,
           left: 16,
-          child: BackButton(),
+          child: AppBackButton(),
+        ),
+        const Positioned(
+          top: 36,
+          right: 16,
+          child: ThemeSwitch(),
         ),
       ],
     );

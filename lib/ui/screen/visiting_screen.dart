@@ -3,6 +3,7 @@ import 'package:places/ui/constants.dart';
 import 'package:places/ui/screen/visiting_screen/visiting_screen_widgets.dart';
 import 'package:places/ui/widgets/app_bottom_navigation_bar.dart';
 import 'package:places/ui/widgets/custom_tab_bar.dart';
+import 'package:places/ui/widgets/theme_switch.dart';
 
 /// VisitingScreen - screen with favorites and visited places
 class VisitingScreen extends StatelessWidget {
@@ -11,15 +12,21 @@ class VisitingScreen extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
           toolbarHeight: 140,
-          backgroundColor: AppColors.appBarBackground,
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           elevation: 0,
           centerTitle: true,
-          title: const Text(
+          title: Text(
             AppTexts.favorites,
-            style: AppTextStyles.appBarTitleFavorites,
+            style: Theme.of(context).textTheme.subtitle1.copyWith(
+                  color: Theme.of(context).primaryColor,
+                ),
           ),
+          actions: const [
+            ThemeSwitch(),
+          ],
           bottom: CustomTabBar(),
         ),
         body: const Padding(

@@ -9,9 +9,9 @@ class AppBarTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
+    return Text(
       AppTexts.appHeader,
-      style: AppTextStyles.appBarTitle,
+      style: Theme.of(context).textTheme.headline1,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
     );

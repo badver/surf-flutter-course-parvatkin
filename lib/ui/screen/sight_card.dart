@@ -18,7 +18,7 @@ class SightCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 3 / 2,
+      aspectRatio: 3 / 1.6,
       child: Padding(
         padding: const EdgeInsets.only(
           left: 16,
@@ -28,7 +28,9 @@ class SightCard extends StatelessWidget {
         child: Container(
           width: double.infinity,
           clipBehavior: Clip.antiAlias,
-          decoration: AppDecorations.cardDecoration,
+          decoration: AppDecorations.cardDecoration.copyWith(
+            color: Theme.of(context).backgroundColor,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

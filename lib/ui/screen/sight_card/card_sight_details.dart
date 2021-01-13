@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/constants.dart';
 
 /// CardSightDetails - a widget to show a sight details
 ///
@@ -23,7 +22,7 @@ class CardSightDetails extends StatelessWidget {
         textAlign: TextAlign.start,
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
-        style: AppTextStyles.cardDetails,
+        style: Theme.of(context).textTheme.bodyText2,
       ),
     );
   }

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/constants.dart';
 
 /// BackButton - this is a back button to go back on tap if user want to go back from current screen.
-class BackButton extends StatelessWidget {
-  const BackButton({
+class AppBackButton extends StatelessWidget {
+  const AppBackButton({
     Key key,
   }) : super(key: key);
 
@@ -15,7 +14,7 @@ class BackButton extends StatelessWidget {
       child: FlatButton(
         padding: const EdgeInsets.all(0),
         onPressed: () {},
-        color: AppColors.white,
+        color: Theme.of(context).buttonColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),

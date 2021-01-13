@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/ui/constants.dart';
 
 /// SightDetailsWidget - a widget to show a sight details
 ///
@@ -19,7 +18,9 @@ class SightDetailsWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 24),
       child: Text(
         sight.details,
-        style: AppTextStyles.sightDetailsDetails,
+        style: Theme.of(context).textTheme.bodyText2.copyWith(
+              color: Theme.of(context).primaryColor,
+            ),
       ),
     );
   }

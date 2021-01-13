@@ -11,7 +11,7 @@ class BuildRouteButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlatButton.icon(
       onPressed: () {},
-      color: AppColors.green,
+      color: AppColorsLight.green,
       height: 48,
       minWidth: double.infinity,
       shape: RoundedRectangleBorder(
@@ -19,11 +19,13 @@ class BuildRouteButton extends StatelessWidget {
       ),
       icon: const Icon(
         Icons.input,
-        color: AppColors.white,
+        color: AppColorsLight.white,
       ),
-      label: const Text(
+      label: Text(
         AppTexts.buildRoute,
-        style: AppTextStyles.buildRouteButton,
+        style: Theme.of(context).textTheme.button.copyWith(
+              color: AppColorsLight.white,
+            ),
       ),
     );
   }
