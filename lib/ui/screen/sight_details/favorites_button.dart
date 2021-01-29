@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:places/ui/constants.dart';
 
 /// FavoritesButton - a button to add to favorites
@@ -10,9 +11,11 @@ class FavoritesButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton.icon(
-      onPressed: () {},
-      icon: Icon(
-        Icons.details,
+      onPressed: () {
+        debugPrint('To favorites button pressed.');
+      },
+      icon: SvgPicture.asset(
+        'res/icons/menu/heart.svg',
         color: Theme.of(context).primaryColor,
       ),
       label: Text(

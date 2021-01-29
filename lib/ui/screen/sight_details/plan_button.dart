@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:places/ui/constants.dart';
 
 /// PlanButton - a button to plan/schedule a visit to a sight
@@ -10,9 +11,11 @@ class PlanButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton.icon(
-      onPressed: () {},
-      icon: Icon(
-        Icons.calendar_today,
+      onPressed: () {
+        debugPrint('Plan button pressed.');
+      },
+      icon: SvgPicture.asset(
+        'res/icons/other/calendar.svg',
         color: Theme.of(context).disabledColor,
       ),
       label: Text(
