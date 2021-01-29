@@ -57,4 +57,8 @@ class AppDecorations {
       ),
     ),
   );
+
+  static const circleBorder = BorderRadius.all(
+    Radius.circular(99),
+  );
 }

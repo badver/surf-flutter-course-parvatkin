@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:places/ui/constants.dart';
 import 'package:places/ui/util/utils.dart';
 
 /// CardSightHeader - a widget to show a sight card header
@@ -42,10 +44,18 @@ class CardSightHeader extends StatelessWidget {
         Positioned(
           top: 16,
           right: 16,
-          child: Placeholder(
-            color: Theme.of(context).textTheme.bodyText1.color,
-            fallbackWidth: 20,
-            fallbackHeight: 18,
+          child: Material(
+            type: MaterialType.transparency,
+            child: InkWell(
+              borderRadius: AppDecorations.circleBorder,
+              onTap: () {
+                debugPrint('heart button pressed.');
+              },
+              child: SvgPicture.asset(
+                'res/icons/menu/heart.svg',
+                color: Theme.of(context).textTheme.bodyText1.color,
+              ),
+            ),
           ),
         ),
       ],
