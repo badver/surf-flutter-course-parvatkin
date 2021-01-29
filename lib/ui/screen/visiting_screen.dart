@@ -38,7 +38,12 @@ class VisitingScreen extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: const AppBottomNavigationBar(selected: 1),
+        bottomNavigationBar: AppBottomNavigationBar(
+          onTap: (value) {
+            debugPrint('Tapped menu index: $value');
+          },
+          selected: 2,
+        ),
       ),
     );
   }

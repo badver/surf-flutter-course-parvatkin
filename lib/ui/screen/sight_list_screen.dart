@@ -25,7 +25,12 @@ class _SightListScreenState extends State<SightListScreen> {
           children: mocks.map((m) => SightCard(sight: m)).toList(),
         ),
       ),
-      bottomNavigationBar: const AppBottomNavigationBar(selected: 0),
+      bottomNavigationBar: AppBottomNavigationBar(
+        onTap: (value) {
+          debugPrint('Tapped menu index: $value');
+        },
+        selected: 0,
+      ),
     );
   }
 }

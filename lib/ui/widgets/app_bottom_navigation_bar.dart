@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 /// BottomNavigationBar
 /// [selected] - index of selected tab
 class AppBottomNavigationBar extends StatelessWidget {
   final int selected;
+  final ValueChanged<int> onTap;
 
   const AppBottomNavigationBar({
     Key key,
     @required this.selected,
+    @required this.onTap,
   }) : super(key: key);
 
   @override
@@ -24,15 +27,55 @@ class AppBottomNavigationBar extends StatelessWidget {
       child: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
+        selectedFontSize: 0.0,
         currentIndex: selected,
-        items: const [
+        onTap: onTap,
+        unselectedItemColor: Theme.of(context).primaryColor,
+        selectedItemColor: Theme.of(context).primaryColor,
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.list),
+            icon: SvgPicture.asset(
+              'res/icons/menu/list.svg',
+              color: Theme.of(context).primaryColor,
+            ),
+            activeIcon: SvgPicture.asset(
+              'res/icons/menu/list-full.svg',
+              color: Theme.of(context).primaryColor,
+            ),
             label: 'List',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
+            icon: SvgPicture.asset(
+              'res/icons/menu/map.svg',
+              color: Theme.of(context).primaryColor,
+            ),
+            activeIcon: SvgPicture.asset(
+              'res/icons/menu/map-full.svg',
+              color: Theme.of(context).primaryColor,
+            ),
+            label: 'Map',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'res/icons/menu/heart.svg',
+              color: Theme.of(context).primaryColor,
+            ),
+            activeIcon: SvgPicture.asset(
+              'res/icons/menu/heart-full.svg',
+              color: Theme.of(context).primaryColor,
+            ),
             label: 'Favorites',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'res/icons/menu/settings.svg',
+              color: Theme.of(context).primaryColor,
+            ),
+            activeIcon: SvgPicture.asset(
+              'res/icons/menu/settings-full.svg',
+              color: Theme.of(context).primaryColor,
+            ),
+            label: 'Settings',
           ),
         ],
       ),
