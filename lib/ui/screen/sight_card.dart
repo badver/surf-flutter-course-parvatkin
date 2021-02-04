@@ -9,10 +9,18 @@ import 'package:places/ui/widgets/work_time.dart';
 /// [sight] - sight data to display
 class SightCard extends StatelessWidget {
   final Sight sight;
+  final GestureTapCallback onCalendarTap;
+  final GestureTapCallback onDeleteTap;
+  final GestureTapCallback onHeartTap;
+  final GestureTapCallback onShareTap;
 
   const SightCard({
     Key key,
     @required this.sight,
+    this.onCalendarTap,
+    this.onDeleteTap,
+    this.onHeartTap,
+    this.onShareTap,
   }) : super(key: key);
 
   @override
@@ -37,6 +45,10 @@ class SightCard extends StatelessWidget {
               CardSightHeader(
                 imageUrl: sight.url,
                 type: sight.type,
+                onCalendarTap: onCalendarTap,
+                onDeleteTap: onDeleteTap,
+                onHeartTap: onHeartTap,
+                onShareTap: onShareTap,
               ),
               const SizedBox(height: 18),
               CardSightName(name: sight.nameSight),

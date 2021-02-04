@@ -22,7 +22,16 @@ class _SightListScreenState extends State<SightListScreen> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: mocks.map((m) => SightCard(sight: m)).toList(),
+          children: mocks
+              .map(
+                (m) => SightCard(
+                  sight: m,
+                  onHeartTap: () {
+                    debugPrint('Heart button clicked');
+                  },
+                ),
+              )
+              .toList(),
         ),
       ),
       bottomNavigationBar: AppBottomNavigationBar(

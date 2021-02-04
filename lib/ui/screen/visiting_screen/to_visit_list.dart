@@ -15,6 +15,12 @@ class ToVisitList extends StatelessWidget {
         for (int i = 0; i < mocks.length / 2; i++)
           SightCard(
             sight: mocks[i],
+            onCalendarTap: () {
+              debugPrint('Calendar button clicked');
+            },
+            onDeleteTap: () {
+              debugPrint('Delete button clicked');
+            },
           ),
       ],
     );

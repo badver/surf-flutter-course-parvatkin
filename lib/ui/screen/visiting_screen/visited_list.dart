@@ -15,6 +15,12 @@ class VisitedList extends StatelessWidget {
         for (int i = mocks.length ~/ 2; i < mocks.length; i++)
           SightCard(
             sight: mocks[i],
+            onShareTap: () {
+              debugPrint('Share button clicked');
+            },
+            onDeleteTap: () {
+              debugPrint('Delete button clicked');
+            },
           ),
       ],
     );
