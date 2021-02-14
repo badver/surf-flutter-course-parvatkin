@@ -10,6 +10,14 @@ class AppTexts {
   static const favorites = 'Избранное';
   static const toVisit = 'Хочу посетить';
   static const visited = 'Посетил';
+  static const clear = 'Очистить';
+  static const distance = 'Расстояние';
+  static const filtersScreenTitle = 'Фильтр';
+  static const filtersScreenDistance = 'Расстояние';
+  static const rangeFrom = 'от';
+  static const rangeTo = 'до';
+  static const meters = 'м';
+  static const kilometers = 'км';
 }
 
 class AppColorsLight {
