@@ -39,30 +39,111 @@ class SightCard extends StatelessWidget {
           decoration: AppDecorations.cardDecoration.copyWith(
             color: Theme.of(context).backgroundColor,
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Stack(
             children: [
-              CardSightHeader(
-                imageUrl: sight.url,
-                type: sight.type.details.name,
-                onCalendarTap: onCalendarTap,
-                onDeleteTap: onDeleteTap,
-                onHeartTap: onHeartTap,
-                onShareTap: onShareTap,
-              ),
-              const SizedBox(height: 18),
-              CardSightName(name: sight.nameSight),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 2,
+              Positioned.fill(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CardSightHeader(
+                      imageUrl: sight.url,
+                      type: sight.type.details.name,
+                    ),
+                    const SizedBox(height: 18),
+                    CardSightName(name: sight.nameSight),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 2,
+                      ),
+                      child: WorkTime(workTime: sight.workTime),
+                    ),
+                    // CardSightDetails(details: sight.details),
+                  ],
                 ),
-                child: WorkTime(workTime: sight.workTime),
               ),
-              // CardSightDetails(details: sight.details),
+              Positioned.fill(
+                child: Material(
+                  type: MaterialType.transparency,
+                  child: InkWell(
+                    onTap: () {
+                      debugPrint('Card tapped');
+                    },
+                  ),
+                ),
+              ),
+              ActionButtons(
+                onHeartTap: onHeartTap,
+                onCalendarTap: onCalendarTap,
+                onShareTap: onShareTap,
+                onDeleteTap: onDeleteTap,
+              ),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ActionButtons extends StatelessWidget {
+  const ActionButtons({
+    Key key,
+    @required this.onHeartTap,
+    @required this.onCalendarTap,
+    @required this.onShareTap,
+    @required this.onDeleteTap,
+  }) : super(key: key);
+
+  final GestureTapCallback onHeartTap;
+  final GestureTapCallback onCalendarTap;
+  final GestureTapCallback onShareTap;
+  final GestureTapCallback onDeleteTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      top: 16,
+      right: 16,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          if (onHeartTap != null)
+            CardButton(
+              onTap: onHeartTap,
+              svgIconAsset: 'res/icons/menu/heart.svg',
+            ),
+          if (onCalendarTap != null)
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 12,
+              ),
+              child: CardButton(
+                onTap: onCalendarTap,
+                svgIconAsset: 'res/icons/other/calendar.svg',
+              ),
+            ),
+          if (onShareTap != null)
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 12,
+              ),
+              child: CardButton(
+                onTap: onShareTap,
+                svgIconAsset: 'res/icons/other/share.svg',
+              ),
+            ),
+          if (onDeleteTap != null)
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 12,
+              ),
+              child: CardButton(
+                onTap: onDeleteTap,
+                svgIconAsset: 'res/icons/other/close.svg',
+              ),
+            ),
+        ],
       ),
     );
   }

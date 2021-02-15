@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 void main() {
   runApp(
     ChangeNotifierProvider<ThemeController>(
-      create: (_) => ThemeController(isDark: true),
+      create: (_) => ThemeController(isDark: false),
       child: App(),
     ),
   );

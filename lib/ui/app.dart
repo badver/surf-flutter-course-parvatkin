@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/screen/visiting_screen.dart';
+import 'package:places/ui/screen/sight_list_screen.dart';
 import 'package:places/ui/widgets/theme_controller.dart';
 import 'package:provider/provider.dart';
 
@@ -12,8 +12,10 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Course App',
       theme: theme,
-      // home: const SightListScreen(),
-      home: VisitingScreen(),
+      // home: SettingsScreen(),
+      // home: FiltersScreen(),
+      home: const SightListScreen(),
+      // home: VisitingScreen(),
       // home: SightDetails(sight: mocks[0]),
     );
   }
