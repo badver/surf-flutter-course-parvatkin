@@ -20,11 +20,12 @@ class AppTexts {
   static const kilometers = 'км';
   static const show = 'Показать';
   static const cafe = 'Кафе';
-  static const hotel = 'Hotel';
+  static const hotel = 'Отель';
   static const museum = 'Музей';
   static const park = 'Парк';
   static const particularPlace = 'Особое место';
   static const restaurant = 'Ресторан';
+  static const categories = 'Категории';
 }
 
 class AppColorsLight {

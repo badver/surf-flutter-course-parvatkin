@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:places/domain/sight_type.dart';
 import 'package:places/ui/constants.dart';
 import 'package:places/ui/screen/filters_screen/filters_screen_button.dart';
 import 'package:places/ui/screen/filters_screen/filters_screen_categories.dart';
 import 'package:places/ui/screen/filters_screen/filters_screen_slider.dart';
 
-class FiltersScreen extends StatelessWidget {
+class FiltersScreen extends StatefulWidget {
+  @override
+  _FiltersScreenState createState() => _FiltersScreenState();
+}
+
+class _FiltersScreenState extends State<FiltersScreen> {
+  final activeFilters = <SightType>{};
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,11 +26,17 @@ class FiltersScreen extends StatelessWidget {
             Icons.arrow_back_ios,
             size: 18,
           ),
-          onPressed: () {},
+          onPressed: () {
+            debugPrint('Go back');
+          },
         ),
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              setState(() {
+                activeFilters.clear();
+              });
+            },
             child: Text(
               AppTexts.clear,
               style: Theme.of(context).textTheme.subtitle2.copyWith(
@@ -35,14 +49,25 @@ class FiltersScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          FiltersScreenCategories(),
-          FiltersScreenSlider(),
-          const Expanded(
-            child: SizedBox(
-              height: 1,
-            ),
+          FiltersScreenCategories(
+            activeFilters: activeFilters,
+            onPressed: (type) {
+              setState(
+                () {
+                  if (activeFilters.contains(type)) {
+                    activeFilters.remove(type);
+                  } else {
+                    activeFilters.add(type);
+                  }
+                },
+              );
+            },
           ),
-          FiltersScreenButton(),
+          const FiltersScreenSlider(),
+          const Expanded(
+            child: SizedBox(),
+          ),
+          const FiltersScreenButton(),
         ],
       ),
     );
