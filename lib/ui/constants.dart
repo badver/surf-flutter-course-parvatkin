@@ -18,6 +18,13 @@ class AppTexts {
   static const rangeTo = 'до';
   static const meters = 'м';
   static const kilometers = 'км';
+  static const show = 'Показать';
+  static const cafe = 'Кафе';
+  static const hotel = 'Hotel';
+  static const museum = 'Музей';
+  static const park = 'Парк';
+  static const particularPlace = 'Особое место';
+  static const restaurant = 'Ресторан';
 }
 
 class AppColorsLight {
