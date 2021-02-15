@@ -1,4 +1,7 @@
 import 'package:meta/meta.dart';
+import 'package:places/domain/sight_type.dart';
+
+export 'package:places/domain/sight_type.dart';
 
 @immutable
 class Sight {
@@ -7,7 +10,7 @@ class Sight {
   final double lon;
   final String url;
   final String details;
-  final String type;
+  final SightType type;
   final String workTime;
 
   const Sight({

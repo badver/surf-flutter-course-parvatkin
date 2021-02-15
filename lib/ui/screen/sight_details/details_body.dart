@@ -27,7 +27,7 @@ class DetailsBody extends StatelessWidget {
           SightName(sight: sight),
           Row(
             children: [
-              SightType(sight: sight),
+              SightTypeWidget(sight: sight),
               const SizedBox(width: 16),
               WorkTime(workTime: sight.workTime),
             ],

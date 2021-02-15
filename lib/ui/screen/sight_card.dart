@@ -44,7 +44,7 @@ class SightCard extends StatelessWidget {
             children: [
               CardSightHeader(
                 imageUrl: sight.url,
-                type: sight.type,
+                type: sight.type.details.name,
                 onCalendarTap: onCalendarTap,
                 onDeleteTap: onDeleteTap,
                 onHeartTap: onHeartTap,

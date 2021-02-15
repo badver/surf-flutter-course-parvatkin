@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
+import 'package:places/domain/sight_type.dart';
 
 /// SightType - a widget to show a sight type
 ///
 /// [sight] - sight data
-class SightType extends StatelessWidget {
-  const SightType({
+class SightTypeWidget extends StatelessWidget {
+  const SightTypeWidget({
     Key key,
     @required this.sight,
   }) : super(key: key);
@@ -15,7 +16,7 @@ class SightType extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      sight.type,
+      sight.type.details.name,
       style: Theme.of(context).textTheme.bodyText1.copyWith(
             color: Theme.of(context).secondaryHeaderColor,
           ),
