@@ -3,7 +3,6 @@ import 'package:places/ui/constants.dart';
 import 'package:places/ui/screen/visiting_screen/visiting_screen_widgets.dart';
 import 'package:places/ui/widgets/app_bottom_navigation_bar.dart';
 import 'package:places/ui/widgets/custom_tab_bar.dart';
-import 'package:places/ui/widgets/theme_switch.dart';
 
 /// VisitingScreen - screen with favorites and visited places
 class VisitingScreen extends StatelessWidget {
@@ -24,9 +23,6 @@ class VisitingScreen extends StatelessWidget {
                   color: Theme.of(context).primaryColor,
                 ),
           ),
-          actions: const [
-            ThemeSwitch(),
-          ],
           bottom: CustomTabBar(),
         ),
         body: const Padding(

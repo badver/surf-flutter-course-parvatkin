@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:places/ui/widgets/theme_controller.dart';
 import 'package:provider/provider.dart';
@@ -9,7 +10,7 @@ class ThemeSwitch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Switch(
+    return CupertinoSwitch(
       onChanged: (value) {
         final controller = context.read<ThemeController>();
         if (value) {

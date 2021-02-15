@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 class AppTexts {
   static const appHeader = 'Список\nинтересных мест';
   static const buildRoute = 'ПОСТРОИТЬ МАРШРУТ';
+  static const settings = 'Настройки';
+  static const darkTheme = 'Тёмная тема';
+  static const watchTutorial = 'Смотреть туториал';
   static const toPlan = 'Запланировать';
   static const toFavorites = 'В Избранное';
   static const favorites = 'Избранное';

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/widgets/theme_switch.dart';
 
 /// App bar
 /// Shows [title] string with app specific styles
@@ -31,8 +30,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ],
               ),
             ),
-            // TODO move theme switch from app bar to settings
-            const ThemeSwitch(),
           ],
         ),
       ),
